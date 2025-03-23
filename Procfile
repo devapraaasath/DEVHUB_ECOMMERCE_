@@ -1,1 +1,1 @@
-web: gunicorn devpro.wsgi --bind 0.0.0.0:$PORT
+web: waitress-serve --port=8000 devpro.wsgi:application
