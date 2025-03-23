@@ -79,18 +79,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, etc.)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Media files (Uploaded images, etc.)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# Ensure this is added for serving static files in production
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')  # This tells Django where to find static files
 ]
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Used for production
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
